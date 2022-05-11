@@ -39,7 +39,6 @@
    text-align: center;
    font-size: xx-large;
    letter-spacing: 0.2em;
-    
  }
 
  .container{
@@ -158,7 +157,6 @@
  
 
  
-
  
  @media (max-width: 768px) {
   h1{
@@ -207,5 +205,6 @@
     width: 2.2rem;
     user-select: none; 
   }
+  
  }
 
