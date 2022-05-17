@@ -1,0 +1,238 @@
+@font-face {
+   font-family: 'Inter';
+   src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+ 
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ html {
+   box-sizing: border-box;
+   font-size: 10px;
+}
+
+ .input {
+ display:none;
+}
+
+ :root {
+   --dark-grey: #374258;
+   --rose: #f74464;
+   --middle-grey: #6a7285;
+   --light-grey: #c4c4c4;
+   --ash: #f3f3f3;
+}
+
+ body {
+   width: 100%;
+   min-height: 100vh;
+   background-color: var(--dark-grey);   
+ }
+
+ h1{
+   font-family: 'Inter', sans-serif;
+   margin: 3rem   auto;
+   color: var(--ash);
+   text-align: center;
+   font-size: xx-large;
+   letter-spacing: 0.2em;
+ }
+
+ .container{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 3rem auto;
+   row-gap: 3rem;
+   justify-content: space-between;
+   max-width: 80rem;
+   padding: 5rem;
+   background-color: var(--light-grey);  
+   border: #6a7285 2px solid;; 
+ }
+ 
+ .slider__wrapper{
+   width: 100%;
+   overflow: hidden;  
+ }
+ 
+ .text__mem__wrapper{
+   flex: 0 65%;
+   overflow: hidden;
+ }
+ 
+ .img {
+   width: 10.5%;
+   margin: 0 1%;
+ }
+
+ .text {
+   width: 12.5%;
+   padding: 0 0 0 1.5%;
+   color: var(--dark-grey);
+   font-family: 'Inter',  Tahoma, sans-serif;
+   font-size: x-large;
+   font-weight: bolder;
+   line-height: 3rem;
+ }
+ 
+ .controls {
+   flex: 0 30%;
+   display: flex;
+   justify-content: flex-end;
+ }
+ 
+ label {
+   width: 4rem;   
+ }
+
+.control__wrapper{
+   display: block;
+   width: 5rem;
+   height: 5.5rem;
+   padding: 0.65rem ;
+   cursor: pointer;
+}
+ .control{
+   width:60%;
+   height: 50%;
+   background-color:var(--rose);
+   border-radius: 30%;
+  }
+ 
+ .control__wrapper:hover > .control {
+   background-color:var(--light-grey);
+   border: var(--dark-grey) 3px solid;
+ }
+ 
+  
+ #slide-1:checked ~ .controls label:nth-of-type(1) .control,
+ #slide-2:checked ~ .controls label:nth-of-type(2) .control,
+ #slide-3:checked ~ .controls label:nth-of-type(3) .control,
+ #slide-4:checked ~ .controls label:nth-of-type(4) .control,
+ #slide-5:checked ~ .controls label:nth-of-type(5) .control,
+ #slide-6:checked ~ .controls label:nth-of-type(6) .control {
+   transform: scale(1.35);
+   background-color:var(--dark-grey);
+   border: #6a7285 3px solid;  
+ }
+ 
+ .slider, .text__mem {
+  width: 800%;
+  display: flex;
+  transition: 1.5s ease-in-out; 
+
+}
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6 { 
+ 
+  opacity: 0.05;
+  transition: opacity 2s ;
+
+}
+
+#slide-1:checked ~  .slider__wrapper .slider .img-1{ 
+  opacity:1
+}
+
+#slide-2:checked ~  .slider__wrapper .slider .img-2{ 
+  opacity:1
+}
+
+#slide-3:checked ~ .slider__wrapper .slider .img-3 {  
+  opacity:1
+}
+
+
+#slide-4:checked ~  .slider__wrapper .slider .img-4{ 
+  opacity:1
+}
+
+#slide-5:checked ~  .slider__wrapper .slider .img-5{ 
+  opacity:1
+}
+
+#slide-6:checked ~ .slider__wrapper .slider .img-6{  
+  opacity:1
+}
+
+ #slide-2:checked ~ .slider__wrapper .slider,
+ #slide-2:checked ~ .text__mem__wrapper .text__mem {
+   transform: translateX(-12.5%);
+   }
+ 
+ #slide-3:checked ~ .slider__wrapper .slider,
+ #slide-3:checked ~ .text__mem__wrapper .text__mem {
+   transform: translateX(-25%);  
+  }
+ 
+ #slide-4:checked ~ .slider__wrapper .slider,
+ #slide-4:checked ~ .text__mem__wrapper .text__mem {
+   transform: translateX(-37.5%);
+ }
+ 
+ #slide-5:checked ~ .slider__wrapper .slider,
+ #slide-5:checked ~ .text__mem__wrapper .text__mem {
+   transform: translateX(-50%);
+ }
+ 
+ #slide-6:checked ~ .slider__wrapper .slider,
+ #slide-6:checked ~ .text__mem__wrapper .text__mem {
+   transform: translateX(-62.5%);
+ }
+ 
+
+ 
+ 
+ @media (max-width: 768px) {
+  h1{
+     margin: 3rem auto ;
+     font-size: large;
+     letter-spacing: 0.2em;
+  }
+  .text {
+    padding: 0 0 0 1%;  
+  }
+   .container {
+     
+     flex-direction: column;
+     margin: auto 3rem   ;
+   }
+ 
+   .text__mem__wrapper{
+     flex: 0 65%;
+     max-width: 100%;
+     order: 2;
+   }
+
+   .controls {
+     justify-content: center;
+   }
+ }
+ 
+
+ 
+ @media (max-width: 320px) {
+
+   .text {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+   }
+ 
+   .control__wrapper{
+    width: 3rem;
+    height: 3.5rem;  
+    padding: 0.15rem ;
+  }
+  .controls {
+    flex-wrap: wrap;
+   
+  }
+  label {
+    width: 2.2rem;
+    user-select: none; 
+  }
+  
+ }
+
