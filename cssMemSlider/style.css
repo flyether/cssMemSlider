@@ -15,7 +15,7 @@
 }
 
  .input {
-  visibility: hidden;
+ display:none;
 }
 
  :root {
@@ -195,8 +195,9 @@
     padding: 0 0 0 1%;  
   }
    .container {
+     
      flex-direction: column;
-     margin: 3rem   ;
+     margin: auto 3rem   ;
    }
  
    .text__mem__wrapper{
